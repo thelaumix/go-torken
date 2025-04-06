@@ -1,7 +1,6 @@
 package serializer
 
 import (
-	"fmt"
 	"reflect"
 	"time"
 
@@ -146,9 +145,7 @@ func serializeValue(data *flexbuffer.Flexbuf, v interface{}) (error) {
 	case reflect.String:
         return sf_String(data, ST_String, val.String())
 	// Weitere Cases für int, bool usw.
-    case reflect.Int:        
-        fmt.Println("Received normal int")
-        return sf_Numeric(data, ST_Int64 ,  int64( v.(int   )))
+    case reflect.Int:        return sf_Numeric(data, ST_Int64 ,  int64( v.(int   )))
     case reflect.Uint:       return sf_Numeric(data, ST_Uint64,  uint64(v.(uint  )))
     case reflect.Int8:       return sf_Numeric(data, ST_Int8  ,  v.(int8  ))
     case reflect.Uint8:      return sf_Numeric(data, ST_Uint8 ,  v.(uint8 ))
@@ -277,7 +274,6 @@ func serializeValue(data *flexbuffer.Flexbuf, v interface{}) (error) {
         case time.Time: 
             return sf_Numeric(data, ST_Date, float64(v.UnixMilli()))
         default:
-            fmt.Println("STRUCT")
             return sf_Struct(data, val, typ)
         }
 
