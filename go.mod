@@ -1,4 +1,4 @@
-module git.thelaumix.com/go-torken
+module github.com/thelaumix/go-torken
 
 go 1.24.0
 

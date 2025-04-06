@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"time"
 
-	"git.thelaumix.com/go-torken/flexbuffer"
+	"github.com/thelaumix/go-torken/flexbuffer"
 
 	"math/big"
 

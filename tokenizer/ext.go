@@ -6,7 +6,7 @@ import (
 	"crypto/rand"
 	"time"
 
-	"git.thelaumix.com/go-torken/serializer"
+	"github.com/thelaumix/go-torken/serializer"
 )
 
 // Identifier for torkens

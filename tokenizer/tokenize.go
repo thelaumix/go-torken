@@ -6,7 +6,7 @@ import (
 	"errors"
 	"time"
 
-	"git.thelaumix.com/go-torken/basex"
+	"github.com/thelaumix/go-torken/basex"
 )
 
 // Nur als Beispiel: Du könntest IDENTIFIER_LENGTH = 12 übernehmen.
